@@ -1,1 +1,1 @@
-main.js
+Meteor.subscribe('tickets');
