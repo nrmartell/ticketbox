@@ -10,5 +10,6 @@ Router.route('/tickets/:_id', {
   name: 'ticketPage',
   data: function() { return Tickets.findOne(this.params._id); }
 });
+Router.route('/submit', {name: 'addTicket'});
 
 Router.onBeforeAction('dataNotFound', {only: 'ticketPage'});
