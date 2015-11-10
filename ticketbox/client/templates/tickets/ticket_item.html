@@ -6,6 +6,10 @@
 	      	<li>{{tour}}</li>
 	      	<li>{{year}}</li>
       </ul>
+      <p>
+        submitted by {{author}}
+        {{#if ownTicket}}<a href="{{pathFor 'ticketEdit'}}">Edit</a>{{/if}}
+      </p>
       <a href="{{pathFor 'ticketPage'}}" class="info btn btn-default">See Me</a>
 
     </div>
