@@ -16,4 +16,7 @@ if (Tickets.find().count() === 0) {
     tour: 'Tour',
     year: 'Year'
   });
+
+
+  
 }

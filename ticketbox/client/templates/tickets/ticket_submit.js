@@ -9,8 +9,16 @@ Template.addTicket.events({
 
 		};
 
-		ticket._id = Tickets.insert(ticket);
-		Router.go('ticketPage', ticket);
+		// ticket._id = Tickets.insert(ticket);
+		// Router.go('ticketPage', ticket);
+
+	Meteor.call('ticketInsert', ticket, function(error, result){
+		if(error)
+			return alert(error.reason);
+		Router.go('ticketPage',{_id: result._id});
+
+	});
+	Router.go('ticketsList');
 
 	}
 
