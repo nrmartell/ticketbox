@@ -9,7 +9,7 @@
       if (data) {
         Session.set('img', data);
         var ticket = {
-          image: data,
+          photo: data
         };
         ticket._id = Tickets.insert(ticket);
         Router.go('ticketPage', ticket);

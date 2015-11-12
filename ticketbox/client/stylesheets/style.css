@@ -31,8 +31,8 @@ body {
   background-position: 50% 50%;
   background-size: contain;
   background-color:#A9A9A9 ;
-  line-height: 150px;
-  height: 150px;
+  line-height: 200px;
+  height: auto;
 
 }
   /* line 32, ../sass/style.scss */
@@ -92,26 +92,12 @@ body {
     float: right;
     margin-top: 7px; }
 
-.comments {
-  list-style-type: none;
-  margin: 0; }
-  .comments li h4 {
-    font-size: 16px;
-    margin: 0; }
-    .comments li h4 .date {
-      font-size: 12px;
-      font-weight: normal; }
-    .comments li h4 a {
-      font-size: 12px; }
-  .comments li p:last-child {
-    margin-bottom: 0; }
-
 .dropdown-menu span {
   display: block;
   padding: 3px 20px;
-  /*clear: both;*/
+  clear: both;
   line-height: 20px;
-  /*color: #bbb;*/
+  color: #bbb;
   white-space: nowrap; }
 
 .load-more {
