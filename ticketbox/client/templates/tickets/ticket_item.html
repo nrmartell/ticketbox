@@ -1,11 +1,8 @@
 <template name="ticketItem">
   <div class="ticket">
     <div class="ticket-content">
- 	  <ul>
-	      	<li>{{band}}</li>
-	      	<li>{{tour}}</li>
-	      	<li>{{year}}</li>
-      </ul>
+ 	  
+          {{photo}}
       <p>
         submitted by {{author}}
         {{#if ownTicket}}<a href="{{pathFor 'ticketEdit'}}">Edit</a>{{/if}}

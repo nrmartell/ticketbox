@@ -1,9 +1,9 @@
 <template name="addTicket">
-    <form class= "main form page">
+    <!-- <form class= "main form page"> -->
       <div class = "form-group">
-        <label class= "control-label" for= "band">Band(s)</label>
+      <!--   <label class= "control-label" for= "band">Band(s)</label>
         <div class= "controls">
-          <input name = "band" id="band" type="text" value = "" placeholder="Bands(2)" class= "form-control"/>
+          <input name = "band" id="band" type="text" value = "" placeholder="Band(s)" class= "form-control"/>
         </div>
       </div>
       <div class="form-group">
@@ -17,9 +17,14 @@
         <div class = "controls">
           <input name = "year" id="year" type="text" value = "" placeholder="Year" class = "form-control"/>
         </div>
-      </div>
+      </div> -->
+           {{> cameraEvent}}
+           {{> libraryEvent}}
+           {{> img}}
+        </div>
+     <!--  </div> -->
         <input type="submit" value="Submit" class= "btn btn-primary"/>
-    </form>
+ <!--    </form> -->
 </template>
 
 
