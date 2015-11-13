@@ -72,6 +72,17 @@ Router.route('/tickets/:_id/edit', {
 
 Router.route('/submit', {name: 'addTicket'});
 
+// Router.route('/userPage', {name: 'userPage'});
+
+Router.route('/userPage', {
+        name:'userPage',
+        data:function(){
+        return Tickets.find({userId: this.userId})
+        }             
+    });
+
+
+
 var requireLogin = function() {
   if (! Meteor.user()) {
     if (Meteor.loggingIn()) {

@@ -14,3 +14,8 @@ Meteor.publish('singleTicket', function(id) {
   check(id, String);
   return Tickets.find(id);
 });
+
+
+Meteor.publish('userPage', function(userId) {
+       return Meteor.user();
+    });

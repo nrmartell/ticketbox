@@ -22,6 +22,8 @@ sacha:spin
 accounts-password
 check
 audit-argument-checks
-mdg:camera
 twbs:bootstrap
-accounts-ui
+ian:accounts-ui-bootstrap-3
+mdg:camera
+accounts-twitter
+accounts-facebook
