@@ -1,4 +1,4 @@
-// if (Meteor.isClient) {
+
   Session.setDefault('img', null);
 
   var getPicture = function(opts) {
@@ -36,15 +36,15 @@
           quality: 75,
           sourceType: Camera.PictureSourceType.PHOTOLIBRARY
         });
+
+
       } else {
         alert('Cordova only feature.');
       }
     }
   });
-
   Template.img.helpers({
     img: function() {
       return Session.get('img');
     }
   });
-// }

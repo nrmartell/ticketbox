@@ -1,14 +1,12 @@
 <template name="ticketItem">
   <div class="ticket">
     <div class="ticket-content">
- 	  
-       <img src="{{photo}}" class = "img-responsive">
+      <img src="{{photo}}" class = "img-responsive">
       <p>
         submitted by {{author}}
         {{#if ownTicket}}<a href="{{pathFor 'ticketEdit'}}">Edit</a>{{/if}}
       </p>
       <a href="{{pathFor 'ticketPage'}}" class="info btn btn-default">See Me</a>
-
     </div>
   </div>
 </template>

@@ -1,8 +1,7 @@
 html {
-  overflow-y: auto;
-}
+  overflow-y: auto;}
 
-.grid-block, .main, .ticket, .comments li, .comment-form {
+.grid-block, .main, .ticket {
   background: #fff;
   border-radius: 3px;
   padding: 10px;
@@ -14,17 +13,8 @@ html {
 body {
   background: black;
   color: #666666; }
-
-#main {
-  position: relative;
-}
-/*.page {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-}*/
-
 .navbar {
+  color: #00FF00;
   margin-bottom: 10px; 
   background-image: url("images/Drawing1.png");
   background-repeat: no-repeat;
@@ -32,21 +22,16 @@ body {
   background-size: contain;
   background-color:#A9A9A9 ;
   line-height: 200px;
-  height: auto;
-
-}
+  height: auto;}
   /* line 32, ../sass/style.scss */
   .navbar .navbar-inner {
-
-    border-radius: 0px 0px 3px 3px; }
+ border-radius: 0px 0px 3px 3px; }
 
 #spinner {
   height: 300px; }
 
 .ticket {
   background-color: #00FF00;
-  /* For modern browsers */
-  /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
   opacity: 1; }
@@ -87,10 +72,6 @@ body {
         color: #aaaaaa; }
     .ticket .ticket-content p {
       margin: 0; }
-  .ticket .discuss {
-    display: block;
-    float: right;
-    margin-top: 7px; }
 
 .dropdown-menu span {
   display: block;
@@ -117,15 +98,15 @@ body {
   height: 100px;
 }
 
-.jumbotron{
+/*.jumbotron{
   text-align: center;
 }
 .jumbotron h2{
   font-size: 60px;
   font-weight: 100;
-}
+}*/
 
-@-webkit-keyframes fadeOut {
+/*@-webkit-keyframes fadeOut {
   0% {opacity: 0;}
   10% {opacity: 1;}
   90% {opacity: 1;}
@@ -137,19 +118,17 @@ body {
   10% {opacity: 1;}
   90% {opacity: 1;}
   100% {opacity: 0;}
-}
+}*/
 
 .errors{
   position: fixed;
-  z-index: 10000;
   padding: 10px;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  pointer-events: none;
-}
-.alert {
+  pointer-events: none;}
+/*.alert {
           animation: fadeOut 2700ms ease-in 0s 1 forwards;
   -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
      -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
@@ -157,5 +136,4 @@ body {
   float: right;
   clear: both;
   margin-bottom: 5px;
-  pointer-events: auto;
-}
+  pointer-events: auto;}*/
