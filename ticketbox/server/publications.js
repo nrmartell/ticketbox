@@ -1,10 +1,7 @@
-// Meteor.publish('tickets', function() {
-//   return Tickets.find();
-// });
 
 Meteor.publish('tickets', function(options) {
   check(options, {
-    sort: Object,
+    // sort: Object,
     limit: Number
   });
   return Tickets.find({}, options);
@@ -17,6 +14,6 @@ Meteor.publish('singleTicket', function(id) {
 
 
 Meteor.publish('myTickets', function(){
-    var currentUserId = this.userId;
-    return Tickets.find({createdBy: currentUserId})
+  var currentUserId = this.userId;
+  return Tickets.find({createdBy: currentUserId})
 });
