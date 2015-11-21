@@ -72,12 +72,14 @@ Router.route('/tickets/:_id/edit', {
 
 Router.route('/submit', {name: 'addTicket'});
 
-// Router.route('/userPage', {name: 'userPage'});
 
-Router.route('/userPage', {
+Router.route('/mytickets', {
         name:'userPage',
-        data:function(){
-        return Tickets.find({userId: this.userId})
+        waitOn: function() {
+    return Meteor.subscribe('myTickets');
+  },
+      data:function(){
+      return Tickets.find({createdBy: Meteor.userId()})
         }             
     });
 

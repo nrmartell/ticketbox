@@ -8,8 +8,11 @@
       }
       if (data) {
         Session.set('img', data);
-        var ticket = {
-          photo: data
+         var ticket = {
+           photo: data,
+           author: Meteor.user().username,
+           createdBy: Meteor.userId(),
+           submitted: new Date()
         };
         ticket._id = Tickets.insert(ticket);
         Router.go('ticketPage', ticket);

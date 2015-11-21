@@ -16,6 +16,7 @@ Meteor.publish('singleTicket', function(id) {
 });
 
 
-Meteor.publish('userPage', function(userId) {
-       return Meteor.user();
-    });
+Meteor.publish('myTickets', function(){
+    var currentUserId = this.userId;
+    return Tickets.find({createdBy: currentUserId})
+});
