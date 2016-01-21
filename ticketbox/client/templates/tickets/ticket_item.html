@@ -3,8 +3,7 @@
     <div class="ticket-content">
       <img src="{{photo}}" class = "img-responsive">
       <p>
-        submitted by {{author}}
-        {{#if ownTicket}}<a href="{{pathFor 'ticketEdit'}}">Edit</a>{{/if}}
+        <a href="{{pathFor 'ticketEdit'}}" class="info btn btn-default">Edit</a>
       </p>
       <a href="{{pathFor 'ticketPage'}}" class="info btn btn-default">See Me</a>
     </div>

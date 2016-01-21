@@ -7,8 +7,8 @@ Router.configure({
   // }
 });
 
-TicketsListController = RouteController.extend({
-  template: 'ticketsList',
+UserPageController = RouteController.extend({
+  template: 'userPage',
   increment: 5, 
   ticketsLimit: function() { 
     return parseInt(this.params.ticketsLimit) || this.increment; 
@@ -35,7 +35,7 @@ TicketsListController = RouteController.extend({
   }
 });
 
-NewTicketsController = TicketsListController.extend({
+NewTicketsController = UserPageController.extend({
   sort: {submitted: -1, _id: -1},
   nextPath: function() {
     return Router.routes.newTickets.path({ticketsLimit: this.ticketsLimit() + this.increment})
@@ -43,10 +43,10 @@ NewTicketsController = TicketsListController.extend({
 });
 
 
-Router.route('/', {
-  name: 'ticketsList',
-  controller: NewTicketsController
-});
+// Router.route('/', {
+//   name: 'ticketsList',
+//   controller: TicketsListController
+// });
 
 Router.route('/new/:ticketsLimit?', {name: 'newTickets'});
 
@@ -72,14 +72,17 @@ Router.route('/tickets/:_id/edit', {
 
 Router.route('/submit', {name: 'addTicket'});
 
-// Router.route('/userPage', {name: 'userPage'});
 
-Router.route('/userPage', {
-        name:'userPage',
-        data:function(){
-        return Tickets.find({userId: this.userId})
-        }             
-    });
+Router.route('/', {
+  name:'userPage',
+  controller: UserPageController,
+  waitOn: function() {
+  return Meteor.subscribe('myTickets');
+  },
+  data:function(){
+  return Tickets.find({createdBy: Meteor.userId()})
+  }             
+});
 
 
 

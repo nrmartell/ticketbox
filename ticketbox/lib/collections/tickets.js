@@ -4,8 +4,8 @@ Tickets.allow({
   insert: function(ticket){
   return true;
   },
-  update: function(userId, ticket) { return ownsDocument(userId, ticket); },
-  remove: function(userId, ticket) { return ownsDocument(userId, ticket); },
+  update: function(ticket) { return true },
+  remove: function(ticket) { return true },
 });
 
 Meteor.methods({

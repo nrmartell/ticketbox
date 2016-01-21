@@ -28,7 +28,7 @@ Template.ticketEdit.events({
     if (confirm("Delete this ticket?")) {
       var currentTicketId = this._id;
       Tickets.remove(currentTicketId);
-      Router.go('ticketsList');
+      Router.go('userPage');
     }
   }
 });
