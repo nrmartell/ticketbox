@@ -7,4 +7,6 @@ Template.ticketItem.helpers({
     a.href = this.url;
     return a.hostname;
   }
+
+
 });

@@ -1,6 +1,6 @@
 Template.ticketsList.helpers({
   tickets: function() {
-    return Tickets.find({}, {sort:{submitted: -1}});
+    return Tickets.find({}, {sort:{artist: 1}});
   }
 });
 
