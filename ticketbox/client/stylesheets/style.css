@@ -1,6 +1,10 @@
 html {
   overflow-y: auto;}
 
+  li{
+    list-style: none;
+  }
+
 .grid-block, .main, .ticket {
   background: #fff;
   border-radius: 3px;
